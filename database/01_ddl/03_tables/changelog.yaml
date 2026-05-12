@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-ddl-tables-001-configuration
+      author: Nicolas
+      logicalFilePath: 01_ddl/03_tables/001_configuration.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/001_configuration.sql.
+      changes:
+        - sqlFile:
+            path: 001_configuration.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/001_configuration.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 005-ddl-tables-002-security
+      author: Nicolas
+      logicalFilePath: 01_ddl/03_tables/002_security.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/002_security.sql.
+      changes:
+        - sqlFile:
+            path: 002_security.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/002_security.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
