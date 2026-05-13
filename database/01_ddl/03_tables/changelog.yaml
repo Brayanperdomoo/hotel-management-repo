@@ -79,3 +79,43 @@ databaseChangeLog:
             splitStatements: true
             endDelimiter: ;
             stripComments: false
+  - changeSet:
+      id: 008-ddl-tables-005-inventory
+      author: FreinierCardona
+      logicalFilePath: 01_ddl/03_tables/005_inventory.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/005_inventory.sql.
+      changes:
+        - sqlFile:
+            path: 005_inventory.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/005_inventory.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 009-ddl-tables-006-billing
+      author: FreinierCardona
+      logicalFilePath: 01_ddl/03_tables/006_billing.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/006_billing.sql.
+      changes:
+        - sqlFile:
+            path: 006_billing.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/006_billing.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
