@@ -1,0 +1,41 @@
+﻿databaseChangeLog:
+  - changeSet:
+      id: 036-dml-inserts-001-configuration
+      author: FreinierCardona
+      logicalFilePath: 02_dml/00_inserts/001_configuration.sql
+      labels: "dml,inserts"
+      comment: Runs 02_dml/00_inserts/001_configuration.sql.
+      changes:
+        - sqlFile:
+            path: 001_configuration.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/001_configuration.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 037-dml-inserts-002-security
+      author: FreinierCardona
+      logicalFilePath: 02_dml/00_inserts/002_security.sql
+      labels: "dml,inserts"
+      comment: Runs 02_dml/00_inserts/002_security.sql.
+      changes:
+        - sqlFile:
+            path: 002_security.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/002_security.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
