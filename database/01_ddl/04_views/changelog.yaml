@@ -1,0 +1,101 @@
+databaseChangeLog:
+  - changeSet:
+      id: 012-ddl-views-001-v-rooms-availability
+      author: Emily
+      logicalFilePath: 01_ddl/04_views/001_v_room_availability.sql
+      labels: "ddl,views"
+      comment: Runs 01_ddl/04_views/001_v_room_availability.sql.
+      changes:
+        - sqlFile:
+            path: 001_v_room_availability.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_views/001_v_room_availability.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 013-ddl-views-002-v-reservation-detail
+      author: Emily
+      logicalFilePath: 01_ddl/04_views/002_v_reservation_detail.sql
+      labels: "ddl,views"
+      comment: Runs 01_ddl/04_views/002_v_reservation_detail.sql.
+      changes:
+        - sqlFile:
+            path: 002_v_reservation_detail.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_views/002_v_reservation_detail.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 014-ddl-views-003-v-billing-stay
+      author: Emily
+      logicalFilePath: 01_ddl/04_views/003_v_stay_billing.sql
+      labels: "ddl,views"
+      comment: Runs 01_ddl/04_views/003_v_stay_billing.sql.
+      changes:
+        - sqlFile:
+            path: 003_v_stay_billing.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_views/003_v_stay_billing.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 015-ddl-views-004-v-user_accounts-roles
+      author: Emily
+      logicalFilePath: 01_ddl/04_views/004_v_user_roles.sql
+      labels: "ddl,views"
+      comment: Runs 01_ddl/04_views/004_v_user_roles.sql.
+      changes:
+        - sqlFile:
+            path: 004_v_user_roles.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_views/004_v_user_roles.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 016-ddl-views-005-v-current-maintenance-dashboard
+      author: Emily
+      logicalFilePath: 01_ddl/04_views/005_v_current_maintenance_dashboard.sql
+      labels: "ddl,views"
+      comment: Runs 01_ddl/04_views/005_v_current_maintenance_dashboard.sql.
+      changes:
+        - sqlFile:
+            path: 005_v_current_maintenance_dashboard.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_views/005_v_current_maintenance_dashboard.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
