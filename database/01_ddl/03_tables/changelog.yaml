@@ -119,3 +119,43 @@ databaseChangeLog:
             splitStatements: true
             endDelimiter: ;
             stripComments: false
+  - changeSet:
+      id: 010-ddl-tables-007-notification
+      author: FreinierCardona
+      logicalFilePath: 01_ddl/03_tables/007_notification.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/007_notification.sql.
+      changes:
+        - sqlFile:
+            path: 007_notification.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/007_notification.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 011-ddl-tables-008-maintenance
+      author: FreinierCardona
+      logicalFilePath: 01_ddl/03_tables/008_maintenance.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/008_maintenance.sql.
+      changes:
+        - sqlFile:
+            path: 008_maintenance.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/008_maintenance.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
