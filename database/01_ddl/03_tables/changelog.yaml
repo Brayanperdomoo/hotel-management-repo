@@ -39,3 +39,43 @@ databaseChangeLog:
             splitStatements: true
             endDelimiter: ;
             stripComments: false
+  - changeSet:
+      id: 006-ddl-tables-003-distribution
+      author: Brayan
+      logicalFilePath: 01_ddl/03_tables/003_distribution.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/003_distribution.sql.
+      changes:
+        - sqlFile:
+            path: 003_distribution.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/003_distribution.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 007-ddl-tables-004-service-delivery
+      author: brayan
+      logicalFilePath: 01_ddl/03_tables/004_service_delivery.sql
+      labels: "ddl,tables"
+      comment: Runs 01_ddl/03_tables/004_service_delivery.sql.
+      changes:
+        - sqlFile:
+            path: 004_service_delivery.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/03_tables/004_service_delivery.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
