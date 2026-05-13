@@ -2,3 +2,6 @@
     - include:
           file: 01_ddl/changelog-master.yaml
           relativeToChangelogFile: true
+    - include:
+          file: 02_dml/changelog-master.yaml
+          relativeToChangelogFile: true
