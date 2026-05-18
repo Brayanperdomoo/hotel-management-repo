@@ -80,3 +80,43 @@
             splitStatements: true
             endDelimiter: ;
             stripComments: false
+  - changeSet:
+      id: 040-dml-inserts-005-inventory
+      author: FreinierCardona
+      logicalFilePath: 02_dml/00_inserts/005_inventory.sql
+      labels: "dml,inserts"
+      comment: Runs 02_dml/00_inserts/005_inventory.sql.
+      changes:
+        - sqlFile:
+            path: 005_inventory.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/005_inventory.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+  - changeSet:
+      id: 041-dml-inserts-006-billing
+      author: FreinierCardona
+      logicalFilePath: 02_dml/00_inserts/006_billing.sql
+      labels: "dml,inserts"
+      comment: Runs 02_dml/00_inserts/006_billing.sql.
+      changes:
+        - sqlFile:
+            path: 006_billing.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/02_dml/00_inserts/006_billing.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            endDelimiter: ;
+            stripComments: false
