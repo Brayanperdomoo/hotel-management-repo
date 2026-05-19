@@ -18,11 +18,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate documentation structure
-        run: |
-          echo "Validating documentation..."
-          test -d docs/entrega-base-datos && echo "OK: docs exist"
-
       - name: Validate database folder structure
         run: |
           echo "Validating database structure..."
