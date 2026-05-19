@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 050-dcl-policies-001-rls-policies
+      id: 045-dcl-policies-001-rls-policies
       author: FreinierCardona
       logicalFilePath: 03_dcl/02_policies/001_rls_policies.sql
       labels: "dcl,policies"
